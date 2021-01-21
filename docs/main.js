@@ -35,7 +35,7 @@ class NavBarComponent {
     }
 }
 NavBarComponent.ɵfac = function NavBarComponent_Factory(t) { return new (t || NavBarComponent)(); };
-NavBarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavBarComponent, selectors: [["app-nav-bar"]], decls: 15, vars: 0, consts: [["SideClass", "navbar navbar-expand-lg navbar-dark indigo"], ["routerLink", "/home", "href", "#", 1, "navbar-brand"], [1, "navbar-nav", "mr-auto"], ["routerLinkActive", "active", 1, "nav-item"], ["routerLink", "/skills", "mdbWavesEffect", "", 1, "nav-link", "waves-light"], ["routerLink", "/certificates", "mdbWavesEffect", "", 1, "nav-link", "waves-light"], ["routerLink", "/portfolio", "routerLinkActive", "active", "mdbWavesEffect", "", 1, "nav-link", "waves-light"]], template: function NavBarComponent_Template(rf, ctx) { if (rf & 1) {
+NavBarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavBarComponent, selectors: [["app-nav-bar"]], decls: 15, vars: 0, consts: [["SideClass", "navbar navbar-expand-lg navbar-dark indigo"], ["routerLink", "home", 1, "navbar-brand"], [1, "navbar-nav", "mr-auto"], ["routerLinkActive", "active", 1, "nav-item"], ["routerLink", "skills", "mdbWavesEffect", "", 1, "nav-link", "waves-light"], ["routerLink", "certificates", "mdbWavesEffect", "", 1, "nav-link", "waves-light"], ["routerLink", "portfolio", "routerLinkActive", "active", "mdbWavesEffect", "", 1, "nav-link", "waves-light"]], template: function NavBarComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mdb-navbar", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mdb-navbar-brand");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 1);
@@ -188,14 +188,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing.module */ "vY5A");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "Sy1n");
-/* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angular-bootstrap-md */ "dbUT");
-/* harmony import */ var _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./nav-bar/nav-bar.component */ "5hVl");
-/* harmony import */ var _about_me_about_me_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./about-me/about-me.component */ "NgH1");
-/* harmony import */ var _skills_skills_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./skills/skills.component */ "fGbd");
-/* harmony import */ var _certificates_certificates_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./certificates/certificates.component */ "mo2b");
-/* harmony import */ var _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./portfolio/portfolio.component */ "zyDg");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "vY5A");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "Sy1n");
+/* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular-bootstrap-md */ "dbUT");
+/* harmony import */ var _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./nav-bar/nav-bar.component */ "5hVl");
+/* harmony import */ var _about_me_about_me_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./about-me/about-me.component */ "NgH1");
+/* harmony import */ var _skills_skills_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./skills/skills.component */ "fGbd");
+/* harmony import */ var _certificates_certificates_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./certificates/certificates.component */ "mo2b");
+/* harmony import */ var _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./portfolio/portfolio.component */ "zyDg");
+
 
 
 
@@ -209,44 +211,50 @@ __webpack_require__.r(__webpack_exports__);
 
 class AppModule {
 }
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [
+        _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"],
+        { provide: _angular_common__WEBPACK_IMPORTED_MODULE_2__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_2__["PathLocationStrategy"] }
+    ], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-            angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_4__["NavbarModule"],
-            angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_4__["WavesModule"],
-            angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_4__["ButtonsModule"]
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
+            angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["NavbarModule"],
+            angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["WavesModule"],
+            angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["ButtonsModule"]
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-        _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_5__["NavBarComponent"],
-        _about_me_about_me_component__WEBPACK_IMPORTED_MODULE_6__["AboutMeComponent"],
-        _skills_skills_component__WEBPACK_IMPORTED_MODULE_7__["SkillsComponent"],
-        _certificates_certificates_component__WEBPACK_IMPORTED_MODULE_8__["CertificatesComponent"],
-        _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_9__["PortfolioComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-        _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-        angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_4__["NavbarModule"],
-        angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_4__["WavesModule"],
-        angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_4__["ButtonsModule"]] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+        _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_6__["NavBarComponent"],
+        _about_me_about_me_component__WEBPACK_IMPORTED_MODULE_7__["AboutMeComponent"],
+        _skills_skills_component__WEBPACK_IMPORTED_MODULE_8__["SkillsComponent"],
+        _certificates_certificates_component__WEBPACK_IMPORTED_MODULE_9__["CertificatesComponent"],
+        _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_10__["PortfolioComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
+        angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["NavbarModule"],
+        angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["WavesModule"],
+        angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["ButtonsModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
                 declarations: [
-                    _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                    _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_5__["NavBarComponent"],
-                    _about_me_about_me_component__WEBPACK_IMPORTED_MODULE_6__["AboutMeComponent"],
-                    _skills_skills_component__WEBPACK_IMPORTED_MODULE_7__["SkillsComponent"],
-                    _certificates_certificates_component__WEBPACK_IMPORTED_MODULE_8__["CertificatesComponent"],
-                    _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_9__["PortfolioComponent"]
+                    _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                    _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_6__["NavBarComponent"],
+                    _about_me_about_me_component__WEBPACK_IMPORTED_MODULE_7__["AboutMeComponent"],
+                    _skills_skills_component__WEBPACK_IMPORTED_MODULE_8__["SkillsComponent"],
+                    _certificates_certificates_component__WEBPACK_IMPORTED_MODULE_9__["CertificatesComponent"],
+                    _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_10__["PortfolioComponent"]
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                    _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-                    angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_4__["NavbarModule"],
-                    angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_4__["WavesModule"],
-                    angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_4__["ButtonsModule"]
+                    _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
+                    angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["NavbarModule"],
+                    angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["WavesModule"],
+                    angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["ButtonsModule"]
                 ],
-                providers: [],
-                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+                providers: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"],
+                    { provide: _angular_common__WEBPACK_IMPORTED_MODULE_2__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_2__["PathLocationStrategy"] }
+                ],
+                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
             }]
     }], null, null); })();
 
@@ -358,12 +366,12 @@ const routes = [
 class AppRoutingModule {
 }
 AppRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: AppRoutingModule });
-AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes, { useHash: true })], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] });
+AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppRoutingModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
-                imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes, { useHash: true })],
+                imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
                 exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
             }]
     }], null, null); })();
