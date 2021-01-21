@@ -28,8 +28,8 @@ export class AboutMeComponent implements OnInit {
   "\nSQL (query, subquery, PL/SQL)"+
   "\nPHP"+
   "\nHTML5";
-  edu1="Rayongwittayakom School";
-  edu2="Thai-Nichi Institute of Technology";
+  edu1="Mathematical-Science, Rayongwittayakom School";
+  edu2="Faculty of Information Technology, Thai-Nichi Institute of Technology";
   constructor() { }
 
   ngOnInit(): void {
