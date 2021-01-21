@@ -1,2 +1,9 @@
 <app-nav-bar></app-nav-bar>
-<router-outlet></router-outlet>
+<div id="customContainer" class="container">
+    <div class="white-box">
+        <div class="content">
+            <router-outlet></router-outlet>
+            <small>latest update: {{latest}}</small>
+        </div>
+    </div>
+</div>

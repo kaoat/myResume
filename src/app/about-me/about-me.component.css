@@ -1,0 +1,13 @@
+#avatar {
+  width: 150px;
+}
+.mainRow {
+  margin-bottom: 10px;
+}
+.subRow {
+  margin-bottom: 3px;
+}
+input,
+textarea {
+  color: black;
+}
